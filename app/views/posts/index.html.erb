@@ -1,0 +1,21 @@
+
+<% content_for :page_title,  "Welcome to my Blog" %>
+
+<div class="section">
+  <div class="container">
+    <% @post.each do |pos| %>
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4"><%= link_to pos.title, pos %></p>
+            </div>
+          </div>
+          <div class="content">
+            <%= pos.content %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
